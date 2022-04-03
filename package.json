@@ -5,10 +5,10 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack server --config webpack.server.config.js",
-    "build": "webpack --config webpack.prod.config.js && yarn tsc:declaration",
+    "dev": "yarn eslint && webpack server --config webpack.server.config.js",
+    "build": "yarn eslint && webpack --config webpack.prod.config.js && yarn tsc:declaration",
     "tsc:declaration": "tsc --project type.declaration.json --declarationDir ./lib",
-    "eslint": "eslint --fix ./src --ext .ts --ext .js"
+    "eslint": "eslint --fix ./src --ext .ts --ext .js ./server --ext .ts --ext .js"
   },
   "repository": {
     "type": "git",

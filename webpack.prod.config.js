@@ -11,8 +11,7 @@ module.exports = {
     filename: (chunkItem) => {
       return `${chunkItem.chunk.name}.js`
     },
-    libraryTarget: 'commonjs',
-    umdNamedDefine: false
+    libraryTarget: 'commonjs'
   },
   resolve: {
     extensions: ['.js', '.ts', '.json']
