@@ -8,7 +8,9 @@
     "dev": "yarn eslint && webpack server --config webpack.server.config.js",
     "build": "yarn eslint && webpack --config webpack.prod.config.js && yarn tsc:declaration",
     "tsc:declaration": "tsc --project type.declaration.json --declarationDir ./lib",
-    "eslint": "eslint --fix ./src --ext .ts --ext .js ./server --ext .ts --ext .js"
+    "eslint": "eslint --fix ./src --ext .ts --ext .js ./server --ext .ts --ext .js",
+    "update:lock": "rm -rf ./node_modules && rm -rf ./yarn.lock && yarn",
+    "git:commit": "yarn eslint && git add . && git commit -m \"feat: git:commit\" && git push origin master"
   },
   "repository": {
     "type": "git",
@@ -23,20 +25,20 @@
   "homepage": "https://github.com/8696/webpack5-build#readme",
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.17.8",
-    "@typescript-eslint/eslint-plugin": "^5.17.0",
-    "@typescript-eslint/parser": "^5.17.0",
-    "babel-loader": "^8.2.4",
+    "@babel/core": "^7.18.2",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
-    "eslint": "^8.12.0",
+    "eslint": "^8.17.0",
     "eslint-webpack-plugin": "^3.1.1",
     "glob": "^7.2.0",
     "html-webpack-plugin": "^5.5.0",
-    "ts-loader": "^9.2.8",
-    "typescript": "^4.6.3",
-    "webpack": "^5.71.0",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.7.3",
+    "webpack": "^5.73.0",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4",
+    "webpack-dev-server": "^4.9.2",
     "webpack-merge": "^5.8.0"
   }
 }
